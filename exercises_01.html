@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise_01</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    .red {
+      background-color: red;
+      display: inline-block;
+      width: 300px;
+      height: 300px;
+      border: none;
+      margin-right: 10px;
+      margin-left: 3.5px;
+    }
+
+    .green {
+      background-color: green;
+      display: inline-block;
+      width: 300px;
+      height: 300px;
+      margin-right: 10px;
+    }
+
+    .blue {
+      background-color: blue;
+      width: 300px;
+      height: 300px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .gray {
+      background-color: gray;
+      width: 300px;
+      height: 300px;
+      display: inline-block;
+      margin-right: 3px;
+    }
+
+    .yellowgreen {
+      background-color: yellowgreen;
+      width: 300px;
+      height: 300px;
+      display: inline-block;
+      border-radius: 150px;
+      margin-right: 10px;
+      margin-bottom: 30px;
+      margin-top: 20px;
+    }
+
+    .service_box {
+      border-width: 0.5px;
+      border-style: solid;
+      width: 300px;
+      height: 85px;
+      margin-top: 0px;
+      margin-bottom: 30px;
+    }
+
+    .question {
+      font-family: Arial;
+      margin-left: 15px;
+    }
+
+    .yes, .no {
+      font-family: Arial;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+    .yes {
+      margin-left: 15px;
+    }
+
+    .install_youtube {
+      background-color: black;
+      width: 1100px;
+      height: 85px;
+    }
+
+    .install_title {
+      color: white;
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 2px;
+      margin-bottom: 0px;
+      padding-top: 14px;
+      padding-left: 10px;
+    }
+
+    .install_description {
+      color: gray;
+      font-family: Arial;
+      font-size: 12px;
+      width: 280px;
+      padding-left: 10px;
+      margin-top: 8px;
+    }
+
+    .pets {
+      display: inline-block;
+      background-color: white;
+      width: 1200px;
+      height: 240px;
+      margin-top: 30px;
+      /* border: rgb(211, 209, 209) solid; */
+    }
+
+    .pets2 {
+      display: inline-block;
+      background-color: white;
+      width: 1200px;
+      height: 30px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    .pets_profile {
+      display: inline-block;
+      margin-bottom: 20px;
+      margin-right: 15px;
+      width: 200px;
+      height: 245px;
+      border: rgb(211, 209, 209) solid;
+      border-radius: 6px;
+    }
+
+    .pets2_profile{
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 0px;
+      margin-bottom: 20px;
+      margin-right: 15px;
+      /*border: rgb(211, 209, 209) solid; */
+      /* border-radius: 6px; */
+    }
+
+    .cat1_image {
+      object-fit: cover;
+      margin-top: 0.5px;
+      width: 200px;
+      height: 150px;
+      border-radius: 6px;
+    }
+
+    .pet_name {
+      font-family: Arial;
+      font-weight: bold;
+      margin-top: 5px;
+      padding-left: 4px;
+      margin-bottom: 2px;
+
+    }
+
+    .pet2_name {
+      font-family: Arial;
+      font-weight: bold;
+      margin-top: 0px;
+      padding-left: 4px;
+      margin-bottom: 2px;
+
+    }
+
+    .pet_stat {
+      margin-left: 4px;
+      color: gray;
+      margin-top: 0px;
+      margin-bottom: 9px;
+      padding-top: 0px;
+    }
+    .pet2_stat {
+      margin-left: 4px;
+      color: gray;
+      margin-top: 0px;
+      margin-bottom: 9px;
+      padding-top: 0px; 
+    }
+    .pet_race {
+      margin-left: 4px;
+      color: gray;
+      margin-top: 4px;
+      margin-bottom: 3px;
+      padding-top: 0px;
+    }
+
+    .addfriend_button {
+      background: rgb(103, 103, 241);
+      font-weight: 550;
+      color: white;
+      border:none;
+      border-radius: 3px;
+      margin-left: 4px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    .addfriend_button:hover {
+      cursor: pointer;
+    }
+    .addfriend_button:active{
+      background-color: white;
+      color: rgb(103, 103, 241);
+    }
+
+    .cat2_div_button {
+      display: inline-block;
+    }
+    .cat2_button {
+      background-color: rgb(103, 103, 241);
+      color: white;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-left: 200px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .cat2_button:hover {
+      cursor: pointer;
+    }
+    
+    .cat2_button:active {
+      background-color: white;
+      color: rgb(103, 103, 241);
+      font-weight: bold;
+    }
+
+    .pet_style {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 0;
+    }
+
+    .harmony {
+      vertical-align: top;
+    }
+
+    .cat2_image {
+      border-radius: 40px;
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="red">
+    
+  </div>
+
+  <div class="green">
+
+  </div>
+
+
+  <div class="blue">
+
+  </div>
+
+  <div class="gray">
+
+  </div>
+
+<div class="yellowgreen">
+
+</div>
+
+<div class="service_box">
+
+  <p class="question"> Satisfied with our service? </p>
+  <button class="yes"> Yes </button>
+  <button class="no"> No </button>
+
+</div>
+
+<div class="install_youtube">
+  <p class="install_title"> Install Youtube Videos </p>
+  <p class="install_description"> Add Youtube Music to your desktop for quick and easy access </p>
+</div>
+
+<!-- Pets division content -->
+<div class="pets">
+    <!-- Pets 1 -->
+    <div class="pets_profile">
+      <img class="cat1_image" src="thumbnail/cat_2.png">
+      <p class="pet_name"> Oliver </p>
+      <p class="pet_stat"> 4 mutual friends </p>
+      <button class="addfriend_button"> Add Friend </button>
+    </div>
+
+    <!-- Pets 2 -->
+    <div class="pets_profile">
+      <img class="cat1_image" src="cat_1.png">
+      <p class="pet_name"> Trump </p>
+      <p class="pet_stat"> 2 mutual friends </p>
+      <button class="addfriend_button"> Add Friend </button>
+    </div>
+
+    <!-- Pets 3 -->
+    <div class="pets_profile">
+      <img class="cat1_image" src="thumbnail/cat_3.png">
+      <p class="pet_name"> JD Vance </p>
+      <p class="pet_stat"> 3 mutual friends </p>
+      <button class="addfriend_button"> Add Friend </button>
+    </div>
+
+    <!-- Pets 4 -->
+    <div class="pets_profile">
+      <img class="cat1_image" src="thumbnail/cat_4.png">
+      <p class="pet_name"> Marco Rubio </p>
+      <p class="pet_stat"> 5 mutual friends </p>
+      <button class="addfriend_button"> Add Friend </button>
+    </div>
+
+    
+    <!-- Pets 4 -->
+    <div class="pets_profile">
+      <img class="cat1_image" src="thumbnail/cat_7.jpg">
+      <p class="pet_name"> J. Biden </p>
+      <p class="pet_stat"> 1 mutual friends </p>
+      <button class="addfriend_button"> Add Friend </button>
+    </div>
+
+    <!-- Pets division content -->
+  </div>
+
+  <div class="pets2">
+    <div class="harmony">
+      <div class="pets2_profile">
+          <img class="cat2_image" src="thumbnail/cat_2.png">
+      </div>
+      <div class="pet_style" >
+        <p class="pet2_name"> Oliver </p>
+        <p class="pet_race"> the cat </p>
+        <p class="pet2_stat"> Popular </p>
+      </div>
+      <div class="cat2_div_button">
+        <button class="cat2_button"> Follow</button>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <div class="pets2">
+    <div class="harmony">
+      <div class="pets2_profile">
+          <img class="cat2_image" src="thumbnail/cat_8.png">
+      </div>
+      <div class="pet_style" >
+        <p class="pet2_name"> Oliver </p>
+        <p class="pet_race"> the cat </p>
+        <p class="pet2_stat"> Popular </p>
+      </div>
+      <div class="cat2_div_button">
+        <button class="cat2_button"> Follow</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

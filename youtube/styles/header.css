@@ -1,0 +1,62 @@
+
+    .header {  
+      background-color: white;
+      height: 65px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      align-items: stretch;
+      margin-top: 0px;
+      margin-right: 10px;
+      margin-bottom: 8px;
+      z-index: 100;
+    }
+
+    .search_box {
+      font-size: 20px;
+      border-width: -5px;
+      margin-bottom: 2px;
+      flex: 1;
+      border-radius: 5px 0px 0px 5px;
+
+    }
+
+    .left-section {
+      /* background-color: lightblue; */
+      display: flex;
+      align-items: center;
+      width: 200px;
+    }
+
+    .middle-section {
+     /* background-color: lightpink; */
+      display: flex;
+      align-items: center;
+      flex: 1;
+      max-width: 750px; 
+      border-radius: 2px;
+      
+    }
+
+    .right-section {
+      display: flex;
+      flex: 0.5;
+      align-items: center;
+      justify-content: end;
+      padding-right: 10px;
+      flex-shrink: 0px;
+      /* background-color: lightblue; */
+      /* width: 300px; */ 
+
+    }
+
+  .sidebarBlock {
+    display: block;
+    margin-bottom: 30px;
+    margin-left: 15px;
+  }

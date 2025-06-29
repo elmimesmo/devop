@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Youtube-Clone</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="youtube/styles/general.css">
+  <link rel="stylesheet" href="youtube/styles/youtube.css">
+  <link rel="stylesheet" href="youtube/styles/header.css">
+
+</head>
+
+<body>
+
+  <!--  Search button  -->
+  <div class="header"> 
+    <div class="left-section">
+      <img src="site_imagens/hamburger-menu.svg" 
+        style="
+          height: 20px;
+          margin-left: 20px;
+          margin-right: 5px;
+      ">
+      <img src="site_imagens/youtube-logo.svg" 
+        style="
+          height: 20px;
+          margin-left: 20px;
+          margin-right: 25px;
+      ">   
+    </div>
+    <div class="middle-section">
+      <input class="search_box" type="text" placeholder="Search" 
+        style=" 
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(220, 219, 219);
+          height: 45px;
+      ">
+      <div style="
+        width: 60px; 
+        height: 45px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(243, 240, 240, 0.977);
+        border-color: rgb(220, 219, 219);
+      ">
+        <img src="site_imagens/search.svg" 
+          style="
+            height: 40px;
+            width: 30px;
+            border-width: 0px;
+        ">
+      </div>
+        <img src="site_imagens/voice-search-icon.svg" 
+          style="
+            height: 30px;
+            margin-left: 10px;
+            border-width: 10px;
+            border-color: rgb(228, 225, 225);
+            border-style: solid;
+            background-color: rgb(228, 225, 225);  
+            border-radius: 60px;
+        ">  
+    </div> 
+
+    <div class="right-section">
+      <img src="site_imagens/upload.svg" 
+        style="
+          height: 30px; 
+          margin-right: 30px;
+      ">
+      <img src="site_imagens/youtube-apps.svg" 
+        style="
+          height: 30px; 
+          margin-right: 30px;
+      ">
+      <div style="position: relative;"> 
+        <img src="site_imagens/notifications.svg" 
+        style="
+          height: 30px;
+          margin-right: 30px;
+        ">
+        <div style=" 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          background-color: red;
+          color: white;
+          font-family: Arial;
+          top: 0;
+          left: 12px;
+          border-radius: 10px;
+          width: 17px;
+          height: 17px;
+        "> 
+          3 </div>
+
+      </div>
+      
+      <img src="site_imagens/my-channel.jpeg" 
+        style="
+          height: 30px;
+          margin-right: 10px;
+      ">
+
+    </div>  
+
+  </div>
+
+  <!-- Sidebar-->
+
+  <div style=" 
+    background-color: rgb(243, 240, 240);
+    color: white;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+  "> 
+
+  <div> 
+     <img class="sidebarBlock" src="site_imagens/home.svg" 
+      style=" 
+        height: 30px;
+        margin-top: 15px; 
+        margin-bottom: 6px;
+    "> 
+    <p style="
+      color: black; 
+      margin-top: 0; 
+      margin-left: -8px;
+      margin-bottom: 30px;
+      text-align: center; 
+      font-size: 10px;
+    "> Home </p>
+  </div>
+    <img class="sidebarBlock" src="site_imagens/explore.svg" 
+      style=" 
+        height: 30px; 
+    ">
+    <img class="sidebarBlock" src="site_imagens/subscriptions.svg" 
+      style="
+        height: 30px;
+    ">
+    <img class="sidebarBlock" src="site_imagens/originals.svg" 
+      style="
+        height: 30px;
+    ">
+    <img class="sidebarBlock" src="site_imagens/youtube-music.svg" 
+      style="
+        height: 30px;
+    ">
+
+    <img class="sidebarBlock" src="site_imagens/library.svg" 
+      style="
+        height: 30px;
+    ">
+  </div>
+  
+  <!--  div principal --> 
+<div class="div_content">
+
+    
+      <!--  A imagem da  primeira div -->
+    <div class="div_width">     
+      <div class="div_thumbnail"> 
+        <img class="thumbnail" src="thumbnail/thumbnail-1.webp">
+        <div class="video_time" style="
+          position: absolute;
+        "> 14:20 </div> 
+      </div>
+
+           <!--  Texto da segunda div vertical  --> 
+      <div class="video_text_and_imageChannel">
+           <!--  imagem da pagina --> 
+        <div class="page_image"> 
+          <img class="image_page" src="thumbnail/channel-1.png">   
+        </div>
+           <!--  Texto da pagina da segunda div --> 
+        <div class="video_description"> 
+          <p class="video_title">
+            Talking Tech and AI with Google CEO Sundar Pichai!
+          </p>
+          <p class="video_author">
+            Marques Browblee
+          </p>
+          <p class="video_stats">
+            3.4M views &#183; 6 months ago
+          </p>
+        </div>
+       <!--  final das div na horizontal   --> 
+      </div>
+    </div>
+    
+        <!--  final da primeira div --> 
+  <div class="div_width">
+    <!--  A imagem da  segunda div --> 
+    <div class="div_thumbnail"> 
+      <img class="thumbnail" src="thumbnail/thumbnail-2.webp"> 
+    </div>
+
+    <!--  Texto da segunda div vertical --> 
+    <div class="video_text_and_imageChannel">
+    <!--  imagem da pagina --> 
+      <div class="page_image"> 
+        <img class="image_page" src="thumbnail/channel-2.png">   
+      </div>
+     <!--  Texto da pagina da segunda div --> 
+      <div class="video_description"> 
+        <p class="video_title">
+          Talking Tech and AI with Google CEO Sundar Pichai!
+        </p>
+        <p class="video_author">
+          Marques Browblee
+        </p>
+        <p class="video_stats">
+          3.4M views &#183; 6 months ago
+        </p>
+      </div>
+      <!--  final das div na horizontal   --> 
+    </div>
+  </div>
+   <!--  final da primeira div --> 
+ 
+   <div class="div_width">
+      <!--  A imagem da  terceira div --> 
+      <div class="div_thumbnail"> 
+        <img class="thumbnail" src="thumbnail/thumbnail-1.webp"> 
+      </div>
+
+           <!--  Texto da segunda div vertical  --> 
+      <div class="video_text_and_imageChannel">
+           <!--  imagem da pagina --> 
+        <div class="page_image"> 
+          <img class="image_page" src="thumbnail/channel-1.png">   
+        </div>
+           <!--  Texto da pagina da segunda div --> 
+        <div class="video_description"> 
+          <p class="video_title">
+            Talking Tech and AI with Google CEO Sundar Pichai!
+          </p>
+          <p class="video_author">
+            Marques Browblee
+          </p>
+          <p class="video_stats">
+            3.4M views &#183; 6 months ago
+          </p>
+        </div>
+       <!--  final das div na horizontal   --> 
+      </div>
+
+    </div>
+    
+        <!--  final da primeira div --> 
+    <div class="div_width">
+        <!--  A imagem da  terceira div --> 
+      <div class="div_thumbnail"> 
+        <img class="thumbnail" src="thumbnail/thumbnail-1.webp"> 
+      </div>
+
+           <!--  Texto da segunda div vertical  --> 
+      <div class="video_text_and_imageChannel">
+           <!--  imagem da pagina --> 
+        <div class="page_image"> 
+          <img class="image_page" src="thumbnail/channel-1.png">   
+        </div>
+           <!--  Texto da pagina da segunda div --> 
+        <div class="video_description"> 
+          <p class="video_title">
+            Talking Tech and AI with Google CEO Sundar Pichai!
+          </p>
+          <p class="video_author">
+            Marques Browblee
+          </p>
+          <p class="video_stats">
+            3.4M views &#183; 6 months ago
+          </p>
+        </div>
+       <!--  final das div na horizontal   --> 
+      </div>
+    </div>
+        <!--  final da primeira div -->
+  
+    <div class="div_width">
+      <!--  A imagem da  terceira div --> 
+      <div class="div_thumbnail"> 
+        <img class="thumbnail" src="thumbnail/thumbnail-2.webp"> 
+      </div>
+
+           <!--  Texto da segunda div vertical  --> 
+      <div class="video_text_and_imageChannel">
+           <!--  imagem da pagina --> 
+        <div class="page_image"> 
+          <img class="image_page" src="thumbnail/channel-2.png">   
+        </div>
+           <!--  Texto da pagina da segunda div --> 
+        <div class="video_description"> 
+          <p class="video_title">
+            Talking Tech and AI with Google CEO Sundar Pichai!
+          </p>
+          <p class="video_author">
+            Marques Browblee
+          </p>
+          <p class="video_stats">
+            3.4M views &#183; 6 months ago
+          </p>
+        </div>
+       <!--  final das div na horizontal   --> 
+      </div>
+
+    </div>
+    
+        <!--  final da primeira div --> 
+    <div class="div_width">
+        <!--  A imagem da  terceira div --> 
+      <div class="div_thumbnail"> 
+        <img class="thumbnail" src="thumbnail/thumbnail-1.webp"> 
+      </div>
+
+           <!--  Texto da segunda div vertical  --> 
+      <div class="video_text_and_imageChannel">
+           <!--  imagem da pagina --> 
+        <div class="page_image"> 
+          <img class="image_page" src="thumbnail/channel-1.png">   
+        </div>
+           <!--  Texto da pagina da segunda div --> 
+        <div class="video_description"> 
+          <p class="video_title">
+            Talking Tech and AI with Google CEO Sundar Pichai!
+          </p>
+          <p class="video_author">
+            Marques Browblee
+          </p>
+          <p class="video_stats">
+            3.4M views &#183; 6 months ago
+          </p>
+        </div>
+       <!--  final das div na horizontal   --> 
+      </div>
+    </div>
+        <!--  final da primeira div -->
+</div>
+</body>
+</html>

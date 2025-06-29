@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex-Exercise</title>
+</head>
+<body style="padding-bottom: 50px;">
+
+  <!-- Primeiro FlexBox -->
+  <div style="
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: row
+  ">
+
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    "> 100px</div>
+    <div style="
+      background-color: lightpink; 
+    "> without Flex </div>
+  </div>
+
+<!-- Segundo FlexBox -->
+  <div style="
+    display: flex;
+    flex-direction: row;
+  "> 
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    "> 100px</div>
+    <div style="
+      background-color: lightpink;
+      flex: 1;
+    "> flex 1 </div>
+  </div>
+
+  <!-- Terceiro FlexBox -->
+  <div style=" 
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: row;
+    margin-top: 10px;
+  ">
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    "> 100px</div>
+    <div style="
+      background-color: lightpink;
+      flex: 1; 
+     "> Flex 1 </div>
+     <div style="
+      background-color: lightblue;
+      flex: 2;
+     "> Flex 2</div>
+    <div style="
+      background-color: lightpink;
+      flex: 3; 
+     "> Flex 3 </div>
+
+  </div>
+
+  <!-- Exercising the menu criation -->
+
+  <div style=" 
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+  ">
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    "> 100px</div>
+    <div style="
+      background-color: lightpink;
+      width: 100px; 
+     "> 100px </div>
+     <div style="
+      background-color: lightblue;
+      width: 100px;
+     "> 100px</div>
+  </div>
+
+<!-- Align Verticaly -->
+
+  <div style=" 
+    display: flex;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  ">
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    "> 100px</div>
+    <div style="
+      background-color: lightpink;
+      width: 100px; 
+     "> 100px </div>
+     <div style="
+      background-color: lightblue;
+      width: 100px;
+     "> 100px</div>
+  </div>
+
+
+</body>
+</html>

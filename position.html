@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Position Pratice </title>
+</head>
+<body style="
+  height: 700px;
+  padding-left: 75px;
+">
+
+    <div style="
+        background-color: black;
+        color: white;
+        position: fixed;
+        display: flex;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 40px;
+        z-index: 1;
+    "> Header </div>
+
+    <div style="
+        background-color: green;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        top: 0px;
+        bottom: 0;
+        margin-top: 40px;
+        width: 70px;
+    "> SideBar
+        <div style=" 
+          position: absolute; background-color: red; color:white;
+          left: 10px;
+          right: 0px;
+          top: 0px;
+        "> x
+    </div>
+    
+    </div>
+
+    <div style=" 
+      position: absolute; background-color: red; color:white;
+      left: 10px;
+      top: 200px;
+    ">
+       Absoluto
+    </div>
+
+    <div style="
+      background-color: lightblue;
+      height: 200px;
+      width: 200px;
+      position: static;
+      margin-top: 45px;
+    ">div 1</div>
+    <div style="
+      background-color: lightpink;
+      height: 200px;
+      width: 200px;
+      position: relative;
+    "> div 2
+        <div style=" 
+      position: absolute; background-color: red; color:white;
+      right: 10px;
+      bottom: 20px;
+    ">
+       14:30
+    </div>
+    </div>
+</body>
+</html>
+
+
+<!-- Quando colocamos um elemento que tem a sua posição como Absoluta dentro de um elemento que tem a sua posição como fixa, o elemento Absoluto fica fixo dentro do elemento Fixed... A medida que movemos a pagina, este elemento Absolute fica fixo dentro do elemento Fixed... e o elemento fixed funciona como referencia para as margens do elementos Fixed... ou seja, se colocarmos top: 10px, este valor sera contado do topo do elemento Fixed 10 pixel para baixo -->
+
+<!-- Se colocarmos um elemento Absoluto dentro de um elemento Relative, o elemento Absoluto fica fica dentro do elemento Relative e se movermos a página, o elementos Absoluto move junto com o elemento Relative --> 
