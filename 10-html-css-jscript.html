@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   
+   <button class="js-button"> test</button>
+
+   <p class="tela"> </p>
+   <button class="botao-1" 
+      onclick="
+         botaoClick(1);
+   ">1</button>
+
+   <button class="botao2" 
+      onclick="
+         botaoClick(2);
+   " >2</button>
+   
+   <script>
+
+      let espressao ='';
+
+      function botaoClick(valor) {
+         espressao += valor;
+         document.querySelector('.tela').textContent= espressao;
+      }
+
+       //const verif = button.classList.contains('js-button')
+      //console.log(verif);
+   </script>
+</body>
+</html>

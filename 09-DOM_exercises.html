@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM PROJECTS</title>
+   <style>
+
+      body {
+         font-family: Arial;
+      }
+
+      .subscribe-button {
+         background-color: black;
+         color: white;
+         padding: 10px 12px;
+         border: none;
+         border-radius: 50px;
+         font-family: Arial;
+         font-weight: bold;
+         cursor: pointer;
+
+      }
+
+      .is-subscribe {
+         background-color: rgb(240, 238, 238);
+         color: black; 
+      }
+
+      .cost-input {
+         padding: 10px 10px;
+         font-size: 14px;
+
+      }
+
+      .calculateButton {
+         background-color: green;
+         color: white;
+         padding: 11px 10px;
+         font-family: Arial;
+         font-weight: bold;
+         cursor: pointer;
+      }
+
+
+   </style>
+</head>
+<body>
+   <p>Youtube Subscribe Button </p> 
+   <button class="js-subscribe-button subscribe-button" 
+      onclick="
+      subscribe();
+   "> Subscribe </button>  
+
+    <p></p>
+    <p></p>
+    
+    <p>Amozon Shipping Calculator </p>
+    <p> Orders under $40 =+$10 shipping </p>
+    <p> Orders over $40 = FREE shipping </p>
+
+    <input class="js-cost-input cost-input"          placeholder="Cost of order" 
+    onkeydown="
+         handleCostKeydown();
+   // temos varias funções de Listen tais como: onclick, onkeydown e outras mais. 
+    ">
+    <button class="calculateButton" onclick="
+      calculateCost();
+    "> Calculate </button>
+    <p class="result"></p>
+
+
+   <script>
+
+      //Função para tratar dos eventos no inputElem
+
+     function handleCostKeydown(){
+         if(event.key === 'Enter'){
+            calculateCost();
+         }
+      }
+
+      // Função para calcular o custo.
+      function calculateCost(){
+        let inputElem = document.querySelector('.js-cost-input');
+        let cost = Number(inputElem.value);
+   
+        if(!cost){
+         console.log('Por favor, digite um numero valido!');
+        } else if(cost < 40) {
+            cost += 10;
+            document.querySelector('.result').innerHTML = `Valor: $${cost}`;
+            console.log(cost);
+        }else {
+            document.querySelector('.result').innerHTML = `Valor btn: $${Number(inputElem.value)}`;
+            console.log(inputElem.value);
+        }
+
+      }
+
+      // Função do Botão de Subscrição
+     function subscribe(){
+         let buttonElem = document.querySelector('.js-subscribe-button');
+
+         if(buttonElem.innerText === 'Subscribe'){
+            buttonElem.innerText = 'Subscribed';
+            buttonElem.classList.add('is-subscribe');
+
+         } else {
+            buttonElem.innerText = 'Subscribe';
+            buttonElem.classList.remove('is-subscribe');
+         }
+     }
+
+   </script>
+</body>
+</html>

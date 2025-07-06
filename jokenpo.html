@@ -43,6 +43,8 @@
          border-color: white;
          background-color: rgb(25, 25, 25);
          color: white;
+         font-weight: bold;
+         font-size: 20px;
       }
 
      
@@ -52,7 +54,7 @@
 
 <body>
     
-    <p class="title"> Rock Paper Scissors</p>
+    <p class="title"> Pedra, Papel ou Tesoura </p>
     
     <button class="move-button" onclick="
         playerMove('rock');
@@ -80,7 +82,11 @@
         updateScore();
         localStorage.removeItem('scores');
 
-    "> Reset Score </button>
+    "> Zerar Marcador </button>
+
+    <p></p>
+    <p></p>
+    <p></p>
 
 
     <script>
@@ -123,45 +129,45 @@
 
             if (pickPlayerMove === 'rock'){
                 if(computerMove === 'rock') {
-                    result = 'Tie.';
+                    result = 'Empate.';
 
                 } else if(computerMove === 'paper'){
-                    result = 'You Lose!';
+                    result = 'Você Perdeu!';
 
                 } else if(computerMove === 'scissor') {
-                    result ='You Win!';
+                    result ='Você Ganhou!';
                 }
             } else if (pickPlayerMove === 'paper') {
                 if(computerMove === 'paper'){
-                    result = 'Tie.';
+                    result = 'Empate.';
 
                 } else if(computerMove === 'rock'){ 
-                    result = 'You Win!';
+                    result = 'Você Ganhou!';
 
                 } else if (computerMove === 'scissor'){
-                    result = 'You Lose!';
+                    result = 'Você Perdeu!';
                 }
             } else if (pickPlayerMove === 'scissor') {
                 if(computerMove === 'scissor'){
-                    result = 'Tie.';
+                    result = 'Empate.';
 
                 } else if(computerMove === 'rock'){ 
-                    result = 'You Lose!';
+                    result = 'Você Perdeu!';
 
                 } else if (computerMove === 'paper'){
-                    result = 'You Win!';
+                    result = 'Você Ganhou!';
                 }
             }
 
-            if (result == 'You Win!'){
+            if (result == 'Você Ganhou!'){
                 scores.win += 1;
-                console.log('Win:' + scores.win);
-            } else if (result === 'You Lose!'){
+                console.log('Vitorias:' + scores.win);
+            } else if (result === 'Você Perdeu!'){
                 scores.lose += 1;
-                console.log('Lose:' + scores.lose);
-            } else if(result ==='Tie.') {
+                console.log('Derrotas:' + scores.lose);
+            } else if(result ==='Empate.') {
                 scores.tie += 1;
-                console.log('tie:'+ scores.tie);
+                console.log('Empates:'+ scores.tie);
             }
 
             // A função updateScore é chamada.
@@ -171,14 +177,14 @@
 
             document.querySelector('.js-result').innerHTML = result;
 
-            document.querySelector('.js-moves').innerHTML =`You: <img class=" move-icon" src="images/${pickPlayerMove}-emoji.png">. Computer: <img class="move-icon" src="images/${computerMove}-emoji.png">.`;
+            document.querySelector('.js-moves').innerHTML =`Você: <img class=" move-icon" src="images/${pickPlayerMove}-emoji.png">         Computador: <img class="move-icon" src="images/${computerMove}-emoji.png">`;
 
         }
 
         // Função placard. Função usada para apresentar os SCORE na tela.
         function updateScore(){
 
-            document.querySelector('.js-placard').innerText = `Win: ${scores.win} Lose: ${scores.lose} Tie: ${scores.tie}`;
+            document.querySelector('.js-placard').innerText = `Vitórias: ${scores.win}  Derrotas: ${scores.lose} Empates: ${scores.tie}`;
 
             if(scores.win===3 && scores.win > scores.lose){
                alert('Voce Venceu!');

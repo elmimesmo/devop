@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Array and Loops </title>
+</head>
+
+<body>
+   <input onkeydown="
+      console.log(event.key);
+      ">
+   
+   <script>
+      const vect1 = {
+         meu: 'meu vector',
+         numero: 10
+      }
+
+      let meuVector = [10, vect1, 30, 40, 50];
+      console.log(meuVector[0]);
+      meuVector[0] = 12;
+      console.log(meuVector[1]);
+      
+      meuVector.push(10);
+      meuVector.push(11);
+      console.log(meuVector);
+      meuVector.splice(1, 2);
+      console.log(meuVector);
+   </script>
+</body>
+</html>
+

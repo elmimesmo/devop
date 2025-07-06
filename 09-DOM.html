@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>09 - DOM </title>
+   <style>
+      
+
+
+
+   </style>
+</head>
+<body>
+   <!-- DOM: Document Object Model -->
+   <button> Hello </button>
+   <p></p>
+   <button class="button-9a"> 9a </button>
+   <p></p>
+   <button class="button-9b"> 9b</button>
+   <p></p>
+
+   <button class="heads" 
+      onclick="
+      const heads = JSON.stringify(document.querySelector(`.heads-paragraph`).innerHTML='You chose: heads');
+   ">Heads</button>
+   <p class="heads-paragraph"></p>
+
+   <button class="tails"
+      onclick="
+      document.querySelector(`.tails-paragraph`).innerHTML='You chose: tails';
+
+   ">tails</button>
+   <p class="tails-paragraph"></p>
+
+
+   <input class="name" placeholder="Name" onkeydown="
+     //eventListener();
+     submitName();
+   "> 
+   <button onclick="
+      submitName();
+   "> Submit </button>
+   <p class="paragraph"></p>
+
+
+
+   <script>
+
+      function eventListener(){ 
+      if(event.key === 'Enter'){
+         submitName();
+      }
+     }
+
+      function displayMove(){
+         document.querySelector()
+      }
+
+      function submitName(){
+         const nome = document.querySelector('.name')
+         document.querySelector('.paragraph').innerHTML = `Your name is: ${nome.value}`;
+      }
+
+      //document.body.innerHTML = 'home';
+      document.title = 'Good Job!';
+      console.log(document.querySelector('.button-9a'));
+      console.log(document.querySelector('.button-9a').innerHTML);
+
+      document.querySelector('.button-9b').innerHTML= '9b done!';
+
+   </script>
+</body>
+</html>

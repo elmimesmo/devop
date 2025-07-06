@@ -4,89 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Rock Paper Scissors </title>
-    <style>
-      body {
-         background-color: rgb(25, 25, 25);
-         color: white;
-         font-family: Arial;
-      }
-
-      .title {
-         font-size: 30px;
-         font-weight: bold;
-      }
-
-      .move-icon {
-         height: 50px;
-         border-radius: 10px;
-      }
-
-      .move-button {
-         background-color: transparent;
-         border: 3px solid white;
-         width: 100px;
-         height: 100px;
-         margin-right: 5px;
-         border-radius: 50px;
-      }
-
-      .moves-result-scores {
-         color: white;
-         font-size: 20px;
-         font-weight: bold;
-      }
-
-      .reset-button {
-         border-radius: 4px;
-         padding: 10px;
-         margin: 30px 0px 0px 0px;
-         border-color: white;
-         background-color: rgb(25, 25, 25);
-         color: white;
-      }
-
-     
-    </style>
-
 </head>
 
 <body>
     
-    <p class="title"> Rock Paper Scissors</p>
+    <p> Rock Paper Scissors</p>
     
-    <button class="move-button" onclick="
+    <button onclick="
         playerMove('rock');
-    "> <img class="move-icon" src="images/rock-emoji.png">
+    "> Rock 
     </button>
 
-    <button class="move-button" onclick=" 
+    <button onclick=" 
         playerMove('paper');
-    "> <img class="move-icon" src="images/paper-emoji.png"> </button>
+    "> Paper </button>
 
-    <button class="move-button" onclick="
+    <button onclick="
         playerMove('scissor');
-    "> <img class="move-icon" src="images/scissor-emoji.png"> </button>
+    "> Scissors </button>
 
-    
-    <p class="js-result moves-result-scores"> </p>
-    <p class="js-moves moves-result-scores"> </p>
-    <p class="js-placard moves-result-scores"> </p>
+    <p class="result"> </p>
+    <p class="moves"> </p>
+    <p class="js-placard"> </p>
 
-    <button class="reset-button" onclick="
+    <button onclick="
         scores.win = 0;
         scores.lose = 0;
         scores.tie = 0;
-
         updateScore();
         localStorage.removeItem('scores');
-
     "> Reset Score </button>
-
 
     <script>
 
-        // Função Jogada do computador
-        
+        let scores = JSON.parse(localStorage.getItem('scores')) || {
+                win: 0,
+                lose: 0,
+                tie: 0
+            }
+
+        // Função Jogada do computador 
         function pickComputerMove() {
             const randomNumber = Math.random();
             let computerMove ='';
@@ -104,15 +61,10 @@
 
             return computerMove;
         }
-
-        let scores = JSON.parse(localStorage.getItem('scores')) || {
-                win: 0,
-                lose: 0,
-                tie: 0
-            }
+        
 
         // A função placard é chamada.
-        updateScore();
+        //updateScore();
 
         // Função Jogada do Jogador
         function playerMove(pickPlayerMove){
@@ -169,9 +121,9 @@
 
             localStorage.setItem('scores', JSON.stringify(scores));
 
-            document.querySelector('.js-result').innerHTML = result;
+            document.querySelector('.result').innerHTML = result;
 
-            document.querySelector('.js-moves').innerHTML =`You: <img class=" move-icon" src="images/${pickPlayerMove}-emoji.png">. Computer: <img class="move-icon" src="images/${computerMove}-emoji.png">.`;
+            document.querySelector('.moves').innerHTML =`You: ${pickPlayerMove}. Compuer: ${computerMove}.`;
 
         }
 
@@ -179,10 +131,6 @@
         function updateScore(){
 
             document.querySelector('.js-placard').innerText = `Win: ${scores.win} Lose: ${scores.lose} Tie: ${scores.tie}`;
-
-            if(scores.win===3 && scores.win > scores.lose){
-               alert('Voce Venceu!');
-            }
         }
 
         // Objecto Criado para controlar as pontuções

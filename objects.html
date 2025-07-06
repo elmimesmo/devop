@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+const product = {
+    name: 'socks', price: 100
+};
+
+product.name = 'T-shirt';
+console.log(product);
+
+delete product.price;
+console.log(product);
+
+product.price = 100;
+console.log(product);
+product.price = 2000;
+product.cost = 1000;
+
+console.log(product);
+
+const product2 ={
+    name: 'computador',
+    name2: 'teclado',
+    name3: 'Mouse',
+    marca: function vendedor(){
+        const name = 'hp';
+        const name2 = 'MacBook';
+        console.log(name);
+        console.log(name2);
+    }
+}
+
+console.log(product2.name);
+console.log(product2.marca());
+
+// Exercicios com JSON
+// Converete product2 para o formato JSON. usando o metodo stringify();
+
+// De lembrar que no formato JSON as variaveis são escritas com aspas duplas. Enquanto que em JavaScript ela são escritas com aspas simpples.
+const conver = JSON.stringify(product2)
+console.log(conver);
+
+// 'conver' agora é uma string JSON... O product2 foi convertido para String JSON
+
+
+// Converte do formato JSON para o formato JavaScript usando o metodo parse();
+const jsonString = JSON.parse(conver);
+console.log(jsonString);
+
+const {messagem1} = product2;
+console.log(messagem1);
+
+// jsonString foi convertido do formato JSON para formato JavaScript.
+
+
+
+// Exercicios com o localStorage()
+
+
+
+
+
+
+// JSON é uma forma de converter os objectos em JavaScript em strings que podem ser enviados durante a comunição entre qualquer computador nada rede. Tudo porque a sintaxe de JavaScript só faz sentido no JavaScript.
+
+// Podemos usar JSON tambem para armazenar dados usado uma objecto conhecido como localStorage
+</script>
+</html>
