@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles/11-todo-list.css">
+   <title>11-todo-list</title>
+</head>
+
+<body>
+   
+   <div class="js-painelCentral  css-painelCentral">
+      
+      
+      
+      <div class="esquerda"> <!-- Div divisor de tela -->
+
+         <div class="nomeRestaurante">
+            <h2 >
+               RESTAURANTE CASA NOSSA     
+            </h2>
+         </div>
+
+      <div class="css-todo-form">
+
+         <p class="js-ordem css-ordem"> 
+            Ordem
+         </p>
+         <input class="js-name-input css-name-input"                   placeholder="Faça o pedido:" 
+         onkeydown="
+            if(event.key==='Enter'){
+              addTodo();
+            }"> 
+         <input class="js-mesa css-mesa"type="number" placeholder="Nº da mesa"  
+         >
+
+         <input class="js-data css-data" type="date" placeholder="data">
+
+         <button class="js-button-add css-button-add" onclick="
+            addTodo();
+         "> Adicionar
+         </button>
+         
+      </div> <!-- Fim da Div dos formularios-->
+
+       <!-- Todo codigo HTML está a ser geradoo Aqui Dentro pelo JavaScript-->
+       <div class="js-list css-list" ></div>
+
+   </div> <!-- Fim da div divisor de tela -->
+      
+
+      
+
+   <div class="direita">
+         <img class="css-imagemDoSite" src="images/restaurante1.png">
+   </div>
+
+   </div>
+   
+   
+   <script src="scripts/11-todo-list.js">
+
+   </script>
+</body>
+</html>
